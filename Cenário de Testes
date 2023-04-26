@@ -20,4 +20,4 @@ uf: "SP"
 Dado que eu tenha um CEP válido "05339000"
 Quando eu enviar uma requisição para a API viacep.com.br/ws/01001000/json/
 Então eu devo receber a resposta em menos de 300ms
-E o retorno deve conter as informações referentes ao CEP consultado
+E o retorno deve conter as informações referentes ao CEP consultado 
