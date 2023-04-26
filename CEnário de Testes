@@ -1,0 +1,23 @@
+//CENÁRIOS DE TESTES
+
+[CT-001]Cenário: Consultar CEP válido
+Dado que eu tenha um CEP válido 
+Quando eu consultar a API viacep.com.br/ws/:cep/json/
+Então eu devo receber o status code 200
+E o retorno deve conter as informações referentes ao CEP consultado
+
+[CT-002]Cenário: Consultar CEP válido e obter o endereço correto
+Dado que eu tenha um CEP válido
+Quando eu consultar a API viacep.com.br/ws/05339000/json/
+Então eu devo receber o status code 200
+E o retorno deve conter as informações referentes ao CEP consultado, incluindo:
+logradouro: "Avenida Corifeu de Azevedo Marques"
+bairro: "Vila Lageado"
+localidade: "São Paulo"
+uf: "SP"
+
+[CT-003]Cenário: Consultar CEP e obter a resposta em 300ms
+Dado que eu tenha um CEP válido "05339000"
+Quando eu enviar uma requisição para a API viacep.com.br/ws/01001000/json/
+Então eu devo receber a resposta em menos de 300ms
+E o retorno deve conter as informações referentes ao CEP consultado
